@@ -7,7 +7,7 @@ public class CharacterManager : MonoBehaviour
     {
         get
         {
-            if(instance == null)
+            if(instance == null) // 방어코드
             {
                 instance = new GameObject("CharacterManager").AddComponent<CharacterManager>();
             }
