@@ -41,7 +41,7 @@ public class Interaction : MonoBehaviour
                 {
                     curInteractGameObject = hit.collider.gameObject;
                     curInteractable = hit.collider.GetComponent<IInteractable>();
-                    // TODO : 프롬프트에 출력해줘라.
+                    SetPromptText();
                 }
             }
             else

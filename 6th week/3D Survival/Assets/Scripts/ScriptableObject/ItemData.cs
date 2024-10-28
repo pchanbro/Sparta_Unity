@@ -17,7 +17,7 @@ public enum ConsumableType
 }
 
 [Serializable]
-public class itemDataConsumable
+public class ItemDataConsumable
 {
     public ConsumableType type;
     public float value;
@@ -39,5 +39,8 @@ public class ItemData : ScriptableObject
     public int maxStackAmount;
 
     [Header("Consumable")]
-    public itemDataConsumable[] consumables;
+    public ItemDataConsumable[] consumables;
+
+    [Header("Equip")]
+    public GameObject equipPrefab;
 }

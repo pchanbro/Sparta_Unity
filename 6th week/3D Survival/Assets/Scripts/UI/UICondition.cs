@@ -12,9 +12,4 @@ public class UICondition : MonoBehaviour
     {
         CharacterManager.Instance.Player.condition.uiCondition = this;
     }
-
-    void Update()
-    {
-        
-    }
 }
