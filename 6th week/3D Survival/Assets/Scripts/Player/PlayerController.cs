@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
         // 화면상 x,y,z축이 어떤 방향인지를 알면 이해하기 좋다.
         // 참고로 유니티의 Rotation값은 마우스 x,y 좌표에 대해 왼쪽 위를 기준으로 오른쪽이 +y, 아래쪽이 +x다.
         // 그와 반대로 mouseDelta.y값은 마우스를 위로 드래그 하면 -가 된다.
+        // 그리고 += 으로 해주는 이유는 시야는 그 위치에서 추가로 더해줘야 하고 어차피 180도 넘어가면 -값으로 바뀐다.
         camCurXRot += mouseDelta.y * lookSensitivity;
 
         // 최소, 최댓값을 넘어가지 않게 최대,최소 값을 넘어가면 그 값을 반환하도록 한다.
