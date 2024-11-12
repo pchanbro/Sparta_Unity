@@ -21,6 +21,8 @@ public class PlayerInputController : TopDownController
     public void OnLook(InputValue value)
     {
         Vector2 newAim = value.Get<Vector2>();
+        // 모니터 상의 마우스 좌표를 게임 월드의 좌표로 받아와 그 위치와 캐릭터의 위치의 차이로 방향을 만든다.
+        // 그걸 통해 캐릭터의 각도, 방향 변화를 캐릭터와 마우스의 위치 차에 따라 발생시킨다.
         Vector2 worldPos = camera.ScreenToWorldPoint(newAim);
         newAim = (worldPos - (Vector2)transform.position).normalized;
 

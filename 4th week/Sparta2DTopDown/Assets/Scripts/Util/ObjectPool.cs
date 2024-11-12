@@ -12,7 +12,7 @@ public class ObjectPool : MonoBehaviour
         public int size;
     }
 
-    public List<Pool> pools = new List<Pool>(); // 리스트는 기본적으로 Serialize가 된다. -> Serialize가 뭐냐?
+    public List<Pool> pools = new List<Pool>(); // 리스트는 기본적으로 Serialize가 된다. (번호가 매겨진다는 뜻인것 같다)
     public Dictionary<string, Queue<GameObject>> PoolDictionary; // 딕셔너리는 Serialize가 안된다. 좀 불편함
 
     private void Awake()
